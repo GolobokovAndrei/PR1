@@ -1,0 +1,35 @@
+﻿<Window x:Class="PR1.Task5Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Задача 5" Height="750" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Введите количество столбцов (M):"/>
+            <TextBox Name="ColumnTextBox" Width="100"/>
+
+            <TextBlock Text="Введите количество строк (N):" Margin="0,10,0,0"/>
+            <TextBox Name="RowTextBox" Width="100"/>
+
+            <Button Content="Сгенерировать массив" Click="GenerateArray_Click" Margin="0,10,0,0"/>
+
+            <TextBlock Text="Исходный массив:" Margin="0,10,0,0"/>
+            <DataGrid Name="OriginalArrayDataGrid" AutoGenerateColumns="True" CanUserAddRows="False"/>
+
+            <TextBlock Text="Массив по возрастанию:" Margin="0,10,0,0"/>
+            <DataGrid Name="SortedAscDataGrid" AutoGenerateColumns="True" CanUserAddRows="False"/>
+
+            <TextBlock Text="Массив по убыванию:" Margin="0,10,0,0"/>
+            <DataGrid Name="SortedDescDataGrid" AutoGenerateColumns="True" CanUserAddRows="False"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Максимальное значение:"/>
+                <TextBlock Name="MaxValueTextBlock" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Минимальное значение:"/>
+                <TextBlock Name="MinValueTextBlock" Margin="10,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
